@@ -162,11 +162,11 @@ POST https://api.rawpool.com/pool/getWorkerList
 |  coinType    |  String  |  YES  |  The coin type needs to be capitalized：BTC   |
 |  minerId  |  int | YES  |  The sub account id can be obtained at getMinerList  |
 |  workerGroupId  | int  |  YES  | Fixed value -1 to get all worker |
-|  hashRateTimeQuantum  | String  |  YES  | 算力统计时间段，可选值： 1m - 1分钟； 5m - 5分钟； 15m - 15分钟； 1h - 1小时； 1d - 1天 |
+|  hashRateTimeQuantum  | String  |  YES  | Time period of calculated hashrate, optional parameters： 1m - One minute； 5m - 5 minute； 15m - 15 minute； 1h - One hour； 1d - one day |
 |  start    |  int  |  YES  |  Paging start（default： 0）   |
 |  size    |  int  |  YES  |  Paging size（default： 500）   |
-|  order[]    |  StringArray  |  YES  |  排序，可选值：workerName - 矿机名；revisedHashRate - 算力； <br> lastShareTimelastShareTime - 最近提交时间； rejectRate - 拒绝率； <br> 以上所有属性后缀加以上所有属性后缀加 desc 可倒序 |
-|  pageDisabled     |  int  | NO  |  需要不分页的话，这一项传 1   |
+|  order[]    |  StringArray  |  YES  |   Sorting,optional parameters：workerName；revisedHashRate； <br> lastShareTimelastShareTime； rejectRate； <br> All attributes above are in reverse order when suffixed with 'desc' |
+|  pageDisabled     |  int  | NO  |  If no pagination is needed, this entry passes 1  |
 |  oauth_token  | String  |  YES | access_token | |
 
 #### Response Description
@@ -222,7 +222,7 @@ POST https://api.rawpool.com/pool/getWorkerCount
 |  coinType    |  String  |  YES  |  The coin type needs to be capitalized：BTC   |
 |  minerId  |  int | YES  |  The sub account id can be obtained at getMinerList  |
 |  workerGroupId  | int  |  YES  | Fixed value -1 to get all worker |
-|  hashRateTimeQuantum  | String  |  YES  | 算力统计时间段，可选值： 1m - 1分钟； 5m - 5分钟； 15m - 15分钟； 1h - 1小时； 1d - 1天 |
+|  hashRateTimeQuantum  | String  |  YES  | Time period of calculated hashrate, optional parameters： 1m - One minute； 5m - 5 minute； 15m - 15 minute； 1h - One hour； 1d - one day |
 |  oauth_token  | String  |  YES | access_token | |
 
 #### Response Description
