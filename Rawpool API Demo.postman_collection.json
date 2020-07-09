@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "f7c5d15c-eb94-4ebb-8324-c760409b2444",
+		"name": "Rawpool API Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.rawpool.com/oauth2/token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "113",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "wsJPw8LWph8pxKDwE4VG",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.rawpool.com/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rawpool",
+						"com"
+					],
+					"path": [
+						"oauth2",
+						"token"
+					]
+				},
+				"description": "获取token"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.rawpool.com/pool/getMinerList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "coinType",
+							"value": "BTC",
+							"type": "text"
+						},
+						{
+							"key": "oauth_token",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.rawpool.com/pool/getMinerList",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rawpool",
+						"com"
+					],
+					"path": [
+						"pool",
+						"getMinerList"
+					]
+				},
+				"description": "获取子账号列表"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.rawpool.com/pool/getEarnStatSummary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "coinType",
+							"value": "BTC",
+							"type": "text"
+						},
+						{
+							"key": "minerId",
+							"value": "miner Id",
+							"type": "text"
+						},
+						{
+							"key": "oauth_token",
+							"value": "token",
+							"type": "text"
+						},
+						{
+							"key": "timezone",
+							"value": "8",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.rawpool.com/pool/getEarnStatSummary",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rawpool",
+						"com"
+					],
+					"path": [
+						"pool",
+						"getEarnStatSummary"
+					]
+				},
+				"description": "获取收益概览信息"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.rawpool.com/pool/getWorkerList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "oauth_token",
+							"value": "token",
+							"type": "text"
+						},
+						{
+							"key": "coinType",
+							"value": "BTC",
+							"type": "text"
+						},
+						{
+							"key": "minerId",
+							"value": "miner Id",
+							"type": "text"
+						},
+						{
+							"key": "workerGroupId",
+							"value": "-1",
+							"type": "text"
+						},
+						{
+							"key": "hashRateTimeQuantum",
+							"value": "15m",
+							"type": "text"
+						},
+						{
+							"key": "start",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "500",
+							"type": "text"
+						},
+						{
+							"key": "order",
+							"value": "workerFullName",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.rawpool.com/pool/getWorkerList",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rawpool",
+						"com"
+					],
+					"path": [
+						"pool",
+						"getWorkerList"
+					]
+				},
+				"description": "获取矿机列表"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.rawpool.com/pool/getWorkerCount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "oauth_token",
+							"value": "token",
+							"type": "text"
+						},
+						{
+							"key": "coinType",
+							"value": "BTC",
+							"type": "text"
+						},
+						{
+							"key": "minerId",
+							"value": "miner Id",
+							"type": "text"
+						},
+						{
+							"key": "workerGroupId",
+							"value": "-1",
+							"type": "text"
+						},
+						{
+							"key": "hashRateTimeQuantum",
+							"value": "15m",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.rawpool.com/pool/getWorkerCount",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rawpool",
+						"com"
+					],
+					"path": [
+						"pool",
+						"getWorkerCount"
+					]
+				},
+				"description": "获取矿机数量"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
